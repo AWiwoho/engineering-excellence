@@ -1,0 +1,27 @@
+# Pilot
+.agent/knowledge/
+.agent/tasks/archive/
+~/.pilot/data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Node (if applicable)
+node_modules/
+dist/
+build/
+
+# Go (if applicable)
+vendor/
+*.exe
