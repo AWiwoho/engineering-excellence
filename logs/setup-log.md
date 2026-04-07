@@ -38,8 +38,28 @@
 - [x] Enable quality gates (build, test, lint)
 - [x] Register project in Pilot config
 
+### Completed (continued)
+- [x] Push repo to GitHub (AWiwoho/pilot) — success
+- [x] Verify Pilot start — daemon starts, GitHub + Jira pollers active
+- [x] Install `gh` CLI (needed for PR creation)
+
+### Verification Results (2026-04-07 21:30)
+```
+Pilot v2.90.6 started successfully
+GitHub polling: AWiwoho/pilot (every 30s, sequential mode)
+Jira polling: meditap.atlassian.net, project CRB
+Claude Code: v2.1.74 (active backend)
+Quality gates: enabled
+Learning system: initialized
+```
+
+### Known Issues
+1. **Jira API v3 migration** — Atlassian deprecated `/rest/api/2/search` (status 410). Pilot v2.90.6 still uses v2. Waiting for Pilot update or need to file issue at github.com/qf-studio/pilot.
+2. **Intent Judge disabled** — Requires ANTHROPIC_API_KEY. Acceptable since we're using Claude Code CLI only.
+3. **Repo/project name mismatch** — Warning: repo=`AWiwoho/pilot` vs folder=`Engineering-excellence`. Non-blocking.
+
 ### Pending
-- [ ] Push repo to GitHub (AWiwoho/pilot)
-- [ ] Verify Jira connection with `pilot start`
+- [ ] Resolve Jira API v3 issue (file Pilot GitHub issue or wait for update)
+- [ ] Authenticate `gh` CLI (`gh auth login`)
 - [ ] Create first Jira test ticket with `pilot` label
-- [ ] Run `pilot start --github` and validate E2E pipeline
+- [ ] Run full E2E pipeline test
