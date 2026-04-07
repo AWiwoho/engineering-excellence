@@ -3,6 +3,9 @@
 .agent/tasks/archive/
 ~/.pilot/data/
 
+# Claude Code local settings
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db
