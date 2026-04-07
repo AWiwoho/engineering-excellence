@@ -1,0 +1,9 @@
+{
+  "name": "engineering-excellence",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node src/server.test.js"
+  }
+}
